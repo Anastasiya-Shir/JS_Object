@@ -212,3 +212,6 @@ let city2 = {
 // }
 
 // console.log(getObj(city1))// доделать
+
+
+

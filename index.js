@@ -218,20 +218,53 @@ console.log(city1.getCity());
 // (*) Создать объект obj, с методами method1(),method2() и method3(). В методе method3() должна возвращаться строка «метод3». Сделайте так, чтобы было возможно выполнение кода obj.method1().method2().method3().
 
 
-const obj = {
-  method1() {
-    return this
-  },
+// const obj = {
+//   method1() {
+//     return this
+//   },
 
-  method2() {
-    return this
-  },
+//   method2() {
+//     return this
+//   },
 
-  method3() {
-    return "метод3"
-  },
+//   method3() {
+//     return "метод3"
+//   },
+
+// }
+
+
+// alert(obj.method1()?.method2()?.method3());
+
+
+
+// // 1   Создайте объект city1 (var city1 = {}), укажите у него свойства name (название города, строка) со значением «ГородN» и population (населенность города, число) со значением 10 млн.
+// // 2 Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
+// // 3 Создайте у объектов city1 и city2 методы getName(), которые вернут соответствующие названия городов
+// // 4 Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями. Примечание: можно обращаться к каждому свойству через цикл for/in, но методы объекта возвращать не нужно
+// // 5 Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
+
+
+let city3 = {
+  name: "ГородN",
+  population: 10000000,
+
 
 }
 
 
-alert(obj.method1()?.method2()?.method3());
+let city4 = {
+  name: "ГородM",
+  population: 1e6,
+
+}
+
+function getNameSecond() {
+
+  return this.name;
+}
+
+city3.GetName = getNameSecond;
+city4.GetName = getNameSecond;
+alert(city3.GetName());
+

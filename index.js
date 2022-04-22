@@ -34,14 +34,11 @@
 // alert(isEmpty(schedule)); // false
 
 // function isEmpty() {
-
 //   for (let key in schedule) {
 //     return (false);
-
 //   }
 
 //   return (true);
-
 // }
 
 // Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
@@ -70,10 +67,9 @@
 
 // //
 // Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
-
 // Например:
-
 // // до вызова функции
+
 // let menu = {
 //   width: 200,
 //   height: 300,
@@ -88,21 +84,16 @@
 
 // //   P.S.Используйте typeof для проверки, что значение свойства числовое.
 
-
 // function multiplyNumeric(obj) {
 
 //   for (let key in obj) {
-
-//     if (typeof obj[key] == "number") {
+//     if (typeof obj[key] ==="number") {
 //       obj[key] *= 2;
 //     }
-
 //   }
-
 // }
 
 // console.log(menu)
-
 
 //У нас есть следующий объект:
 // let user = {
@@ -111,17 +102,12 @@
 // };
 // //Проверьте, что этот объект не пустой и что в нем есть ключ age.
 
-
-// // function getEmpty(obj) {
-
-// //   alert(`Свойство age сушествует в объекте ${"age" in obj}`);
-
+// function getEmpty(obj) {
+// alert(`Свойство age сушествует в объекте ${"age" in obj}`);
 
 // //   for (let key in obj) {
 
-
 // //     return true;
-
 // //   }
 
 // //   return false
@@ -131,16 +117,13 @@
 
 // //Получите из объекта obj значение id в констанду id не используя выражение obj.id
 
-// // const obj = {
-// //   id: 5,
-// //   token: 12343423
-// // };
+// const obj = {
+//   id: 5,
+//   token: 12343423
+// };
 
-// // let id = obj["id"];
-
-// // console.log(id)
-
-
+// let { id } = obj;
+// console.log(id)
 
 // //Получите из объекта obj значение id и разместите его в константу userId.
 
@@ -157,27 +140,32 @@
 
 
 
-// // // 
+// // //
 // // 1   Создайте объект city1 (var city1 = {}), укажите у него свойства name (название города, строка) со значением «ГородN» и population (населенность города, число) со значением 10 млн.
 // // 2 Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
 // // 3 Создайте у объектов city1 и city2 методы getName(), которые вернут соответствующие названия городов
 // // 4 Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями. Примечание: можно обращаться к каждому свойству через цикл for/in, но методы объекта возвращать не нужно
 // // 5 Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
 
-let city1 = {
-  name: "ГородN",
-  population: 10000000,
-  getCity() {
-    return getObj();
-  }
-}
+// function getObj() {
+
+//   return this;
+// }
+
+// let city1 = {
+//   name: "ГородN",
+//   population: 10000000,
+//   getCity() {
+//     return getObj();
+//   }
+// }
 
 
-let city2 = {
-  name: "ГородM",
-  population: 1e6,
-  getCity: getObj(),
-}
+// let city2 = {
+//   name: "ГородM",
+//   population: 1e6,
+//   getCity: getObj(),
+// }
 
 
 // function getName(obj) {
@@ -204,23 +192,15 @@ let city2 = {
 
 //5 Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
 // (*) Создать объект obj, с методами method1(),method2() и method3(). В методе method3() должна возвращаться строка «метод3». Сделайте так, чтобы было возможно выполнение кода obj.method1().method2().method3()./ 5 Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
-
-
-function getObj() {
-
-  return this;
-}
-
-console.log(city2.getCity);
-console.log(city1.getCity());
-
+// console.log(city2.getCity);
+// console.log(city1.getCity());
 
 // (*) Создать объект obj, с методами method1(),method2() и method3(). В методе method3() должна возвращаться строка «метод3». Сделайте так, чтобы было возможно выполнение кода obj.method1().method2().method3().
 
 
 // const obj = {
 //   method1() {
-//     return this
+//     return this;
 //   },
 
 //   method2() {
@@ -230,13 +210,9 @@ console.log(city1.getCity());
 //   method3() {
 //     return "метод3"
 //   },
-
 // }
 
-
 // alert(obj.method1()?.method2()?.method3());
-
-
 
 // // 1   Создайте объект city1 (var city1 = {}), укажите у него свойства name (название города, строка) со значением «ГородN» и population (населенность города, число) со значением 10 млн.
 // // 2 Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
@@ -244,27 +220,22 @@ console.log(city1.getCity());
 // // 4 Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями. Примечание: можно обращаться к каждому свойству через цикл for/in, но методы объекта возвращать не нужно
 // // 5 Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
 
+// let city3 = {
+//   name: "ГородN",
+//   population: 10000000,
+// }
 
-let city3 = {
-  name: "ГородN",
-  population: 10000000,
+// let city4 = {
+//   name: "ГородM",
+//   population: 1e6,
+// }
 
+// function getNameSecond() {
 
-}
+//   return this.name;
+// }
 
-
-let city4 = {
-  name: "ГородM",
-  population: 1e6,
-
-}
-
-function getNameSecond() {
-
-  return this.name;
-}
-
-city3.GetName = getNameSecond;
-city4.GetName = getNameSecond;
-alert(city3.GetName());
+// city3.getName = getNameSecond;
+// city4.getName = getNameSecond;
+// alert(city3.getName());
 

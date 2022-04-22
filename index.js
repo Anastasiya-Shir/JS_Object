@@ -123,24 +123,8 @@
 // };
 
 // let { id } = obj;
-// console.log(id)
+// console.log(id);
 
-// //Получите из объекта obj значение id и разместите его в константу userId.
-
-// // const obj = {
-// //   id: 5,
-// //   token: 12343423
-// // };
-
-// // let id = obj["id"];
-
-// // const userId = id;
-
-// // console.log(userId)
-
-
-
-// // //
 // // 1   Создайте объект city1 (var city1 = {}), укажите у него свойства name (название города, строка) со значением «ГородN» и population (населенность города, число) со значением 10 млн.
 // // 2 Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
 // // 3 Создайте у объектов city1 и city2 методы getName(), которые вернут соответствующие названия городов
@@ -156,6 +140,7 @@
 //   name: "ГородN",
 //   population: 10000000,
 //   getCity() {
+
 //     return getObj();
 //   }
 // }
@@ -200,14 +185,17 @@
 
 // const obj = {
 //   method1() {
+
 //     return this;
 //   },
 
 //   method2() {
+
 //     return this
 //   },
 
 //   method3() {
+
 //     return "метод3"
 //   },
 // }

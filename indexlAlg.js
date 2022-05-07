@@ -536,3 +536,4 @@ function ucfirst(str) {
 let str = 'я изучаю программирование';
 
 document.write(ucfirst(str));
+

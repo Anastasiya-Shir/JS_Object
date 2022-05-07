@@ -373,13 +373,18 @@
 //   * @param {Array} array - массив, значения которого массивы пар
 //   * @returns {Array}
 
-// const fromPairs = (array) => {
-//   throw new Error('Напишите здесь свое решение');
-// }
+// let obj = {};
 
-// const data = [['a', 1], ['b', 2]];
-// console.log(fromPairs(data)) // { 'a': 1, 'b': 2 }
+// const fromPairs = (array) => array.reduce((prev, item) => {
+//   console.log(prev)
+//   prev = {
+//     [item[0]]: item[1],
+//   }
+//   return Object.assign(obj, prev);
+// }, {})
 
+// const dat = [['a', 1], ['b', 2]];
+// console.log(fromPairs(dat)) // { 'a': 1, 'b': 2 }
 
 // Without. Напишите функцию, возвращает новый массив без предоставленных значений. Используйте примитивные типы.
 
@@ -391,7 +396,12 @@
 //   * @returns {Array}
 
 // const without = (array, ...args) => {
-//   throw new Error('Напишите здесь свое решение');
+//   console.log(array)
+//   let newArray = array;
+//   for (let i = 0; i < args.length; i++) {
+//     array = array.filter((el) => el !== args[i]);
+//   }
+//   return array;
 // }
 
 // const dat = [1, 2, 3, 1, 2];
@@ -460,80 +470,80 @@
 
 
 // Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
-function getSum(array) {
-  let sum = 0;
+// function getSum(array) {
+//   let sum = 0;
 
-  for (let i = 0; i < array.length; i++) {
+//   for (let i = 0; i < array.length; i++) {
 
-    for (let j = 0; j < array[i].length; j++) {
-      sum += array[i][j];
-    }
-  }
+//     for (let j = 0; j < array[i].length; j++) {
+//       sum += array[i][j];
+//     }
+//   }
 
-  return sum
-}
+//   return sum
+// }
 
-arr = [[1, 2, 3], [4, 5], [6]]
-alert(getSum(arr));
+// arr = [[1, 2, 3], [4, 5], [6]]
+// alert(getSum(arr));
 
 // Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные числа. Создайте для этого вспомогательную функцию isPositive(), которая параметром будет принимать число и возвращать true, если число положительное, и false - если отрицательное.
 
-let array = [-1, 3, 4, 7, -6, -8, 6, -9];
+// let array = [-1, 3, 4, 7, -6, -8, 6, -9];
 
-function isPositive(item) {
-  if (item >= 0) {
+// function isPositive(item) {
+//   if (item >= 0) {
 
-    return true;
-  } else {
+//     return true;
+//   } else {
 
-    return false;
-  }
-}
+//     return false;
+//   }
+// }
 
-let newArray = [];
+// let newArray = [];
 
-for (var i = 0; i <= array.length; i++) {
+// for (var i = 0; i <= array.length; i++) {
 
-  if (isPositive(array[i])) {
-    newArray.push(array[i]);
-  }
-}
+//   if (isPositive(array[i])) {
+//     newArray.push(array[i]);
+//   }
+// }
 
-console.log(newArray);
+// console.log(newArray);
 
 //  Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
 
-function getDigitsSum(num) {
-  let sum = 0;
-  let str = String(num);
-  for (let i = 0; i < str.length; i++) {
-    sum += Number(str[i]);
+// function getDigitsSum(num) {
+//   let sum = 0;
+//   let str = String(num);
+//   for (let i = 0; i < str.length; i++) {
+//     sum += Number(str[i]);
 
-  }
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-alert(getDigitsSum(14));
+// alert(getDigitsSum(14));
 
 //  Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-function ucfirst(str) {
-  let strSecond = str.split(' ');
-  let newStr = '';
+// function ucfirst(str) {
+//   let strSecond = str.split(' ');
+//   let newStr = '';
 
-  for (let i = 0; i < strSecond.length; i++) {
+//   for (let i = 0; i < strSecond.length; i++) {
 
-    let zagFirst = strSecond[i].substring(0, 1).toUpperCase();
-    console.log(zagFirst)
-    let next = strSecond[i].substring(1, strSecond[i].length);
-    newStr += zagFirst + next + ' ';
-  }
+//     let zagFirst = strSecond[i].substring(0, 1).toUpperCase();
+//     console.log(zagFirst)
+//     let next = strSecond[i].substring(1, strSecond[i].length);
+//     newStr += zagFirst + next + ' ';
+//   }
 
-  return newStr;
-}
+//   return newStr;
+// }
 
-let str = 'я изучаю программирование';
+// let str = 'я изучаю программирование';
 
-document.write(ucfirst(str));
+// document.write(ucfirst(str));
 

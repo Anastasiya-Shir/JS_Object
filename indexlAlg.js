@@ -459,13 +459,25 @@
 //   * @param {number} size - Размер чанков
 //   * @returns {Array}
 
-// const chunk = (array, size) => {
-//   throw new Error('Напишите здесь свое решение');
-// }
+const chunk = (array, size) => {
+  let array2 = array.slice(0);
+  let newArray = [];
+  let newArray2 = [];
+  let remains = array.length % size;
+  let a = Math.ceil(array.length / size);
 
-// const dat = [1, 2, 3, 4, 5, 6, 7];
-// console.log(chunk(dat, 2)) // [[1, 2], [3, 4], [5, 6], [7]]
-// console.log(chunk(dat, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
+  for (let i = 1; i <= a; i++) {
+    newArray = (array2.splice(0, size) || array2.splice(0, remains));
+    newArray2.push(newArray);
+    console.log(newArray)
+  }
+
+  return newArray2;
+}
+
+const dat = [1, 2, 3, 4, 5, 6, 7];
+console.log(chunk(dat, 2)) // [[1, 2], [3, 4], [5, 6], [7]]
+console.log(chunk(dat, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
 
 
 

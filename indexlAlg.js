@@ -462,17 +462,14 @@
 const chunk = (array, size) => {
   let array2 = array.slice(0);
   let newArray = [];
-  let newArray2 = [];
   let remains = array.length % size;
   let a = Math.ceil(array.length / size);
 
   for (let i = 1; i <= a; i++) {
-    newArray = (array2.splice(0, size) || array2.splice(0, remains));
-    newArray2.push(newArray);
-    console.log(newArray)
+    newArray.push((array2.splice(0, size) || array2.splice(0, remains)));
   }
 
-  return newArray2;
+  return newArray;
 }
 
 const dat = [1, 2, 3, 4, 5, 6, 7];

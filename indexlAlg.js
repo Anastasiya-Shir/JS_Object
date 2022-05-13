@@ -459,22 +459,22 @@
 //   * @param {number} size - Размер чанков
 //   * @returns {Array}
 
-const chunk = (array, size) => {
-  let array2 = array.slice(0);
-  let newArray = [];
-  let remains = array.length % size;
-  let a = Math.ceil(array.length / size);
+// const chunk = (array, size) => {
+//   let array2 = array.slice(0);
+//   let newArray = [];
+//   let remains = array.length % size;
+//   let a = Math.ceil(array.length / size);
 
-  for (let i = 1; i <= a; i++) {
-    newArray.push((array2.splice(0, size) || array2.splice(0, remains)));
-  }
+//   for (let i = 1; i <= a; i++) {
+//     newArray.push((array2.splice(0, size) || array2.splice(0, remains)));
+//   }
 
-  return newArray;
-}
+//   return newArray;
+// }
 
-const dat = [1, 2, 3, 4, 5, 6, 7];
-console.log(chunk(dat, 2)) // [[1, 2], [3, 4], [5, 6], [7]]
-console.log(chunk(dat, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
+// const dat = [1, 2, 3, 4, 5, 6, 7];
+// console.log(chunk(dat, 2)) // [[1, 2], [3, 4], [5, 6], [7]]
+// console.log(chunk(dat, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
 
 
 
@@ -555,4 +555,67 @@ console.log(chunk(dat, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
 // let str = 'я изучаю программирование';
 
 // document.write(ucfirst(str));
+
+
+// Flatten. Напишите функцию, которая преобразует глубокий массив в одномерный. Пожалуйста, не используйте array.flat(), чтобы сделать задачу интереснее. (рекурсия)
+// let newarray = [];
+
+// function flatten(array) {
+
+//   array.forEach(element => {
+//     // console.log(element);
+//     Array.isArray(element) ? flatten(element) : newarray.push(element);
+//     console.log(newarray)
+//     // console.log(result);
+//   });
+
+//   return newarray;
+// }
+
+// let arr = [[[1, 2], 3], [4, 5], [6, 7], [8, [9, [10]]]];
+// console.log(flatten(arr));
+
+
+// let arr = [1, 2, 3, 54, 2, 344];
+// let i = 0;
+
+// function getElement(array) {
+//   if (array.length > i) {
+//     console.log(array[i]);
+//     i++;
+//     getElement(array);
+//   }
+//   return i;
+// }
+
+// (getElement(arr));
+
+
+// Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
+
+
+let num = "123456786";
+let sum = 0;
+let str = "";
+
+
+function getSum(num) {
+  if (num <= 9) {
+
+    return num;
+  } else {
+    str = String(num);
+    num = 0;
+
+    for (let i = 0; i < str.length; i++) {
+      num += Number(str[i]);
+    }
+
+    return getSum(num);
+  }
+
+  throw Error("input only number");
+}
+
+console.log(getSum(num));
 

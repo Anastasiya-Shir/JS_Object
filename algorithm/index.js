@@ -1,22 +1,18 @@
 // Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false.
 
-// let isNumberEqual = (a, b) => return (a === b);
-//
+// let isNumberEqual = (a, b) => a === b;
 
-// alert(isNumberEqual(3, 8))
+// alert(isNumberEqual(3, 3))
 
-//Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
+///Сделайте функцию, которая параметрами принимает 2 числа.Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
 
-// function isSumMorethenTen(a, b) {
+// let isSumMorethenTen = (a, b) => a + b > 10;
 
-//   return a + b > 10;
-// }
-
-// alert(isSumMorethenTen(3, 7))
+// alert(isSumMorethenTen(3, 9))
 
 //Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. Если отрицательное - пусть функция вернет true, а если нет - false.
 
-// let isNumberNegative = (n) => n < 0;
+// let isNumberNegative = n => n < 0;
 
 // alert(isNumberNegative(-5));
 
@@ -45,7 +41,7 @@
 //   let str = '';
 
 //   for (let i = 1; i < 21; i++) {
-//     str = str.concat('x');
+//     str += 'x';
 //     console.log(str);
 //   }
 
@@ -537,39 +533,30 @@
 
 //  Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-// function ucfirst(str) {
-//   let strSecond = str.split(' ');
-//   let newStr = '';
+function ucfirst(str) {
+  let strSecond = str.split(' ')
+  let newStr = strSecond.map(item => item[0].toUpperCase() + item.slice(1));
 
-//   for (let i = 0; i < strSecond.length; i++) {
+  return newStr.join(' ');
+}
 
-//     let zagFirst = strSecond[i].substring(0, 1).toUpperCase();
-//     console.log(zagFirst)
-//     let next = strSecond[i].substring(1, strSecond[i].length);
-//     newStr += zagFirst + next + ' ';
-//   }
+let str = 'изучаю программирование';
 
-//   return newStr;
-// }
-
-// let str = 'я изучаю программирование';
-
-// document.write(ucfirst(str));
+document.write(ucfirst(str));
 
 
 // Flatten. Напишите функцию, которая преобразует глубокий массив в одномерный. Пожалуйста, не используйте array.flat(), чтобы сделать задачу интереснее. (рекурсия)
+
 // let newarray = [];
 
 // function flatten(array) {
 
 //   array.forEach(element => {
-//     // console.log(element);
 //     Array.isArray(element) ? flatten(element) : newarray.push(element);
-//     console.log(newarray)
-//     // console.log(result);
+//     arr = newarray;
 //   });
 
-//   return newarray;
+//   return arr;
 // }
 
 // let arr = [[[1, 2], 3], [4, 5], [6, 7], [8, [9, [10]]]];
@@ -594,28 +581,29 @@
 // Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
 
 
-let num = "123456786";
-let sum = 0;
-let str = "";
+// let num = 1567;
+// let sum = 0;
+// let str = "";
 
 
-function getSum(num) {
-  if (num <= 9) {
+// function getSum(num) {
+//   if (num <= 9) {
 
-    return num;
-  } else {
-    str = String(num);
-    num = 0;
+//     return num;
+//   } else if (num > 9) {
+//     str = String(num);
+//     num = 0;
 
-    for (let i = 0; i < str.length; i++) {
-      num += Number(str[i]);
-    }
+//     for (let i = 0; i < str.length; i++) {
+//       num += +(str[i]);
+//     }
 
-    return getSum(num);
-  }
+//     return getSum(num);
+//   } else if (typeof (num) != Number) {
 
-  throw Error("input only number");
-}
+//     throw Error("input only number");
+//   }
+// }
 
-console.log(getSum(num));
+// console.log(getSum(num));
 

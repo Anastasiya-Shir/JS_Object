@@ -533,34 +533,37 @@
 
 //  Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-function ucfirst(str) {
-  let strSecond = str.split(' ')
-  let newStr = strSecond.map(item => item[0].toUpperCase() + item.slice(1));
+function getArr(str) {
+  let strSecond = str.split(' ');
+  let newStr = strSecond.map(item => ucfirst(item));
 
   return newStr.join(' ');
 }
 
+function ucfirst(item) {
+
+  return item[0].toUpperCase() + item.slice(1);
+}
+
 let str = 'изучаю программирование';
 
-document.write(ucfirst(str));
+document.write(getArr(str));
 
 
 // Flatten. Напишите функцию, которая преобразует глубокий массив в одномерный. Пожалуйста, не используйте array.flat(), чтобы сделать задачу интереснее. (рекурсия)
 
-// let newarray = [];
 
+// let newarray = [];
 // function flatten(array) {
 
 //   array.forEach(element => {
 //     Array.isArray(element) ? flatten(element) : newarray.push(element);
-//     arr = newarray;
+
 //   });
-
-//   return arr;
 // }
-
 // let arr = [[[1, 2], 3], [4, 5], [6, 7], [8, [9, [10]]]];
-// console.log(flatten(arr));
+// flatten(arr);
+// console.log(newarray);
 
 
 // let arr = [1, 2, 3, 54, 2, 344];
@@ -611,4 +614,4 @@ document.write(ucfirst(str));
 
 // Cортиоовка вставкой
 
-let arr = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];
+// let arr = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]

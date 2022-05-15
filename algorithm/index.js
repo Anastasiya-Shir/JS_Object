@@ -163,36 +163,36 @@
 
 //Дан массив ['a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3.
 
-// let mas = ['a', 'b', 'c'];
-// mas.push(1, 2, 3);
+// let arr = ['a', 'b', 'c'];
+// arr.push(1, 2, 3);
 
 //Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].
 
-// let mas = [1, 2, 3, 4, 5];
-// mas.splice(1, 2);
+// let arr = [1, 2, 3, 4, 5];
+// arr.splice(1, 2);
 
 // Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый массив элементы [2, 3, 4].
 
-// let mas = [1, 2, 3, 4, 5];
-// mas.splice(0, 1);
-// mas.splice(-1, 1)
+// let arr = [1, 2, 3, 4, 5];
+// arr.splice(0, 1);
+// arr.splice(-1, 1)
 
 //Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 2, 3, 'a', 'b', 'c', 4, 5].
 
-// let mas = [1, 2, 3, 4, 5];
-// mas.splice(2, 0, 'a', 'b', 'c');
+// let arr = [1, 2, 3, 4, 5];
+// arr.splice(2, 0, 'a', 'b', 'c');
 
 //Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
 
-// let mas = [1, 2, 3, 4, 5];
-// mas.splice(0, 0, 'a', 'b');
-// mas.splice(6, 0, 'c');
-// mas.splice(8, 0, 'e');
+// let arr = [1, 2, 3, 4, 5];
+// arr.splice(0, 0, 'a', 'b');
+// arr.splice(6, 0, 'c');
+// arr.splice(8, 0, 'e');
 
 //Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.
 
-// let mas = [3, 4, 1, 2, 7];
-// mas.sort();
+// let arr = [3, 4, 1, 2, 7];
+// arr.sort();
 
 //Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.
 
@@ -207,9 +207,9 @@
 //Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') не используя цикл.
 
 // let str = '123456';
-// let mas = str.split('');
-// mas.reverse();
-// str = mas.join("");
+// let arr = str.split('');
+//arr.reverse();
+// str = arr.join("");
 
 //Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения
 
@@ -229,8 +229,8 @@
 // }
 
 // Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'.
-// let mas = [1, 2, 3, 4, 15];
-// let check = mas.indexOf(5);
+// let arr  = [1, 2, 3, 4, 15];
+// let check = arr.indexOf(5);
 
 // if (check != -1) {
 //   document.write("yes");
@@ -262,13 +262,13 @@
 
 //Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть - выведите 'да', а если нет - выведите 'нет'
 
-// mas = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-// function getSimilarNumber(mas) {
+// function getSimilarNumber(arr) {
 //   let check = "no";
-//   for (let i = 0; i < mas.length; i++) {
+//   for (let i = 0; i < arr.length; i++) {
 
-//     if (mas[i] == mas[i + 1]) {
+//     if (arr[i] == arr[i + 1]) {
 //       check = "yes";
 //       break;
 //     }
@@ -277,13 +277,13 @@
 //   return alert(check);
 // }
 
-// getSimilarNumber(mas);
+// getSimilarNumber(arr);
 
 //  Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее (два цикла)
 
-// let mas = [];
+// let arr = [];
 
-// (function getMassiv() {
+// (function getArray() {
 
 //   for (let i = 1; i < 6; i++) {
 //     let str = '';
@@ -291,9 +291,9 @@
 //       str = str.concat(i);
 //     }
 
-//     mas.push(str);
+//     arr.push(str);
 //   }
-//   let k = console.log(mas);
+//   let k = console.log(arr);
 
 //   return k;
 // }())
@@ -607,3 +607,8 @@ document.write(ucfirst(str));
 
 // console.log(getSum(num));
 
+
+
+// Cортиоовка вставкой
+
+let arr = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];

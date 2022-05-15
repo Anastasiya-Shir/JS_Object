@@ -541,9 +541,7 @@ const str = 'ы изучаю программирование';
 
 document.write(getStringWithUPFirstLetter(str));
 
-
 // Flatten. Напишите функцию, которая преобразует глубокий массив в одномерный. Пожалуйста, не используйте array.flat(), чтобы сделать задачу интереснее. (рекурсия)
-
 
 // let newarray = [];
 // function flatten(array) {
@@ -556,7 +554,6 @@ document.write(getStringWithUPFirstLetter(str));
 // let arr = [[[1, 2], 3], [4, 5], [6, 7], [8, [9, [10]]]];
 // flatten(arr);
 // console.log(newarray);
-
 
 // let arr = [1, 2, 3, 54, 2, 344];
 // let i = 0;
@@ -607,3 +604,5 @@ document.write(getStringWithUPFirstLetter(str));
 // Cортиоовка вставкой
 
 // let arr = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
+
+

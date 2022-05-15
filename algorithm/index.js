@@ -533,21 +533,13 @@
 
 //  Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-function getArr(str) {
-  let strSecond = str.split(' ');
-  let newStr = strSecond.map(item => ucfirst(item));
+const getStringWithUPFirstLetter = str => str.split(' ').map(item => ucfirst(item)).join(' ');
 
-  return newStr.join(' ');
-}
+const ucfirst = (item) => item[0].toUpperCase() + item.slice(1);
 
-function ucfirst(item) {
+const str = 'ы изучаю программирование';
 
-  return item[0].toUpperCase() + item.slice(1);
-}
-
-let str = 'изучаю программирование';
-
-document.write(getArr(str));
+document.write(getStringWithUPFirstLetter(str));
 
 
 // Flatten. Напишите функцию, которая преобразует глубокий массив в одномерный. Пожалуйста, не используйте array.flat(), чтобы сделать задачу интереснее. (рекурсия)

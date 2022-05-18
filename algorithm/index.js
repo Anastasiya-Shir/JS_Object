@@ -533,13 +533,13 @@
 
 //  Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-const getStringWithUPFirstLetter = str => str.split(' ').map(item => ucfirst(item)).join(' ');
+// const getStringWithUPFirstLetter = str => str.split(' ').map(item => ucfirst(item)).join(' ');
 
-const ucfirst = (item) => item[0].toUpperCase() + item.slice(1);
+// const ucfirst = (item) => item[0].toUpperCase() + item.slice(1);
 
-const str = 'ы изучаю программирование';
+// const str = 'ы изучаю программирование';
 
-document.write(getStringWithUPFirstLetter(str));
+// document.write(getStringWithUPFirstLetter(str));
 
 // Flatten. Напишите функцию, которая преобразует глубокий массив в одномерный. Пожалуйста, не используйте array.flat(), чтобы сделать задачу интереснее. (рекурсия)
 
@@ -605,4 +605,199 @@ document.write(getStringWithUPFirstLetter(str));
 
 // let arr = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
 
+// function sortImput(array) {
+//   for (let i = 1; i < array.length; i++) {
+//     const current = array[i];
+//     let j = i;
+//     while (j > 0 && array[j - 1] > current) {
+//       array[j] = array[j - 1];
+//       j--;
+//     }
+//     array[j] = current;
+//   }
 
+//   return array;
+// }
+
+// console.log(sortImput(arr));
+
+// сортировка пузырьком возрастание
+
+// let array = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3];
+
+// function boubleSort(arr) {
+//   for (let k = arr.length; k > 0; k--) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         let firsElem = arr[i];
+//         let secondElem = arr[i + 1];
+//         arr[i] = secondElem;
+//         arr[i + 1] = firsElem;
+//       }
+
+//     }
+//   }
+//   return arr;
+// }
+
+
+// // сортировка пузырьком убывание
+
+
+
+// function boubleSortMin(arr) {
+//   for (let k = arr.length; k > 0; k--) {
+//     let flag = false;
+
+//     for (let i = 0; i < arr.length; i++) {
+
+//       if (arr[i] < arr[i + 1]) {
+//         flag = true;
+//         let firsElem = arr[i];
+//         let secondElem = arr[i + 1];
+//         arr[i] = secondElem;
+//         arr[i + 1] = firsElem;
+//       }
+//     }
+//     if (flag === false) break;
+//   }
+
+//   return arr;
+// }
+
+// console.log(boubleSortMin(array))
+
+
+
+//binary saerch
+
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 19, 20];
+let someNumber = 10;
+let countleft = 0;
+let countright = 0;
+
+function binarySearch(array) {
+  let keyIndex = Math.floor(array.length / 2);
+
+  if (array.length === 2 && array[0] != someNumber && array[1] != someNumber) {
+
+    return ("we don't have this number");
+  }
+
+  if (array.length === 2 && (array[0] === someNumber || array[1] != someNumber)) {
+
+    return ("goog news we found this number");
+  }
+
+  if (array[keyIndex] === someNumber) {
+    let a = array.length;
+
+    return ('такое число есть');
+
+  } else if (array[keyIndex] < someNumber) {
+    array.splice(0, keyIndex);
+    countright++;
+
+  } else if (array[keyIndex] > someNumber) {
+    array.splice(keyIndex);
+    countleft++;
+  }
+
+  return binarySearch(array);
+}
+
+console.log(binarySearch(arr));
+
+//fibanach
+
+// let arr = [1, 1];
+
+// function fib(a) {
+//   if (a < 2 || typeof a != Number) {
+
+//     return ('ведите корректное значение')
+//   }
+//   arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+//   if (arr.length === a) {
+
+//     return arr[arr.length - 1];
+//   } else {
+//     return fib(a);
+//   }
+// }
+// console.log(fib('s'));
+
+// arr = [1, 1]
+// function fibs(a) {
+//   for (let i = 2; i < a; i++) {
+//     arr.push(arr[i - 1] + arr[i - 2])
+//   }
+
+//   return arr[a - 1];
+// }
+
+// console.log(fibs(7));
+
+//5 Напишите функцию range(), принимающую два аргумента: начало и конец диапазона, и возвращающую массив, который содержит все числа из диапазона, включая начальное и конечное. Третий необязательный аргумент функции range() – шаг для построения массива. Убедитесь, что функция range() работает с отрицательным шагом: например, range(5, 2, -1) возвращает [5, 4, 3, 2].
+// function range(start, end) {
+//   let arr1 = [];
+//   if (start > end) {
+//     for (let i = start; i >= end; i--) {
+//       arr1.push(i);
+//     }
+
+//     return arr1;
+//   } else {
+//     for (let i = start; i <= end; i++) {
+//       arr1.push(i);
+//     }
+//     return arr1;
+//   }
+// }
+
+// console.log(range(22, 17))
+
+//6 Создать функцию createMatrix(), принимающую количество строк и количество столбцов матрицы и возвращающее матрицу (массив массивов), заполненную случайными числами в диапазоне от 0 до 100.
+// let arr3 = [[1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]];
+// console.log(arr3[0][0]);
+
+// function createMatrix(string, col) {
+//   let arr4 = [];
+//   for (let i = 0; i < string; i++) {
+//     arr4[i] = [];
+
+//     for (let j = 0; j < col; j++) {
+//       arr4[i][j] = Math.floor(Math.random() * (100));
+//     }
+//   }
+
+//   for (let i = 0; i < string; i++) {
+
+//     for (let j = 0; j < col; j++) {
+//       document.write(arr4[i][j] + " ");
+//     }
+//     document.write("<br>");
+//   }
+// };
+
+// createMatrix(3, 3)
+
+// 7 Реализуйте функцию union(), которая объединит уникальные элементы всех массивов, переданных ей.
+
+// Пример: union([1, 2, 2, 3], [101, 2, 1, 10], [2, 1]) вернёт
+// [1, 2, 3, 101, 10].
+
+// function union(...args) {
+//   let arg = args.flat().sort(function (a, b) {
+//     return a - b;
+//   })
+
+//   let result = Array.from(new Set(arg))
+
+//   return result
+// }
+
+// console.log(union([1, 2, 2, 3], [101, 2, 1, 10], [2, 1]));
+
+// в третьем задании формула!!!!!!!!!!!!!!!!!!

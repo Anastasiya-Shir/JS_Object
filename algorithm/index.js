@@ -605,7 +605,7 @@
 
 // let arr = [5, 12, 2, 7, 6, 9, 19, 25, 4, 1, 3]
 
-// function sortImput(array) {
+// function sortInput(array) {
 //   for (let i = 1; i < array.length; i++) {
 //     const current = array[i];
 //     let j = i;
@@ -619,7 +619,7 @@
 //   return array;
 // }
 
-// console.log(sortImput(arr));
+// console.log(sortInput(arr));
 
 // сортировка пузырьком возрастание
 
@@ -627,6 +627,7 @@
 
 // function boubleSort(arr) {
 //   for (let k = arr.length; k > 0; k--) {
+
 //     for (let i = 0; i < arr.length; i++) {
 //       if (arr[i] > arr[i + 1]) {
 //         let firsElem = arr[i];
@@ -634,16 +635,13 @@
 //         arr[i] = secondElem;
 //         arr[i + 1] = firsElem;
 //       }
-
 //     }
 //   }
+
 //   return arr;
 // }
 
-
 // // сортировка пузырьком убывание
-
-
 
 // function boubleSortMin(arr) {
 //   for (let k = arr.length; k > 0; k--) {
@@ -667,10 +665,7 @@
 
 // console.log(boubleSortMin(array))
 
-
-
 //binary saerch
-
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 19, 20];
 let someNumber = 10;
@@ -740,6 +735,7 @@ console.log(binarySearch(arr));
 // console.log(fibs(7));
 
 //5 Напишите функцию range(), принимающую два аргумента: начало и конец диапазона, и возвращающую массив, который содержит все числа из диапазона, включая начальное и конечное. Третий необязательный аргумент функции range() – шаг для построения массива. Убедитесь, что функция range() работает с отрицательным шагом: например, range(5, 2, -1) возвращает [5, 4, 3, 2].
+
 // function range(start, end) {
 //   let arr1 = [];
 //   if (start > end) {
@@ -792,7 +788,6 @@ console.log(binarySearch(arr));
 //   let arg = args.flat().sort(function (a, b) {
 //     return a - b;
 //   })
-
 //   let result = Array.from(new Set(arg))
 
 //   return result

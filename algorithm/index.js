@@ -745,26 +745,20 @@ console.log(isEqual(arr1, arr4)); // false
 // let arr3 = [[1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]];
 // console.log(arr3[0][0]);
 
-function createMatrix(string, col) {
-  let arr4 = [];
-  for (let i = 0; i < string; i++) {
-    arr4[i] = [];
+// function createMatrix(string, col) {
+//   let arr4 = [];
+//   for (let i = 0; i < string; i++) {
+//     arr4[i] = [];
 
-    for (let j = 0; j < col; j++) {
-      arr4[i][j] = Math.floor(Math.random() * (100));
-    }
-  }
+//     for (let j = 0; j < col; j++) {
+//       arr4[i][j] = Math.floor(Math.random() * (100));
+//       document.write(arr4[i][j] + " ");
+//     }
+//     document.write("<br>");
+//   }
+// };
 
-  for (let i = 0; i < string; i++) {
-
-    for (let j = 0; j < col; j++) {
-      document.write(arr4[i][j] + " ");
-    }
-    document.write("<br>");
-  }
-};
-
-createMatrix(3, 3)
+// createMatrix(3, 3)
 
 // 7 Реализуйте функцию union(), которая объединит уникальные элементы всех массивов, переданных ей.
 
